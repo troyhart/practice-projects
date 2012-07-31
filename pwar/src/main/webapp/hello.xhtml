@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+  <title>JSF Hello</title>
+  <style>
+  h1 {
+    color: red;
+  }
+</style>
+</h:head>
+
+<h:body bgcolor="white">
+  <c:if test="${!empty hello.name}"><h1>Hello #{hello.name}!</h1></c:if>
+  <h:form>
+    <fieldset>
+      <legend>Name</legend>
+      <h:inputText value="#{hello.name}" />
+    </fieldset>
+    <h:commandButton value="Say Hello" action="#{hello.execute}"></h:commandButton>
+  </h:form>
+</h:body>
+</html>
