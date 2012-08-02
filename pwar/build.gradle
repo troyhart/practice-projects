@@ -1,7 +1,6 @@
 apply from: 'https://rambo.part.net/gradle/setup_closures.gradle'
 apply from: 'https://rambo.part.net/gradle/canonical_libs.gradle'
 
-apply plugin: 'groovy'
 apply plugin: 'war'
 
 pnSetupDepResolver()
@@ -9,22 +8,6 @@ pnSetupPackaging()
 pnSetupUploadArchives()
 pnSetupDistApplication()
 pnSetupEclipse()
-
-buildscript {
-  apply from: 'http://dev.tehlulz.com/com.tehlulz/gradle/repos.gradle'
-
-  repositories {
-    maven {
-     url project.repos['tehlulzRLibsUrl']
-     url project.repos['tehlulzRMavenCentralUrl']
-    }
-  }
-
-  dependencies {
-    classpath group: 'com.tehlulz.gradle.plugins', name: 'tehlulz-glassfish-embedded', version: '0.1'
-  }
-}
-apply plugin: 'tehlulz-glassfish-embedded'
 
 dependencies {
   compile ( 'org.glassfish.main.extras:glassfish-embedded-web:3.1.2' )
