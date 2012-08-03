@@ -1,14 +1,12 @@
-apply from: 'https://rambo.part.net/gradle/setup_closures.gradle'
+apply from: '/home/thart/svn_depot/rambo/setup_closures.gradle'
 apply from: 'https://rambo.part.net/gradle/canonical_libs.gradle'
 
 apply plugin: 'war'
 
 pnSetupDepResolver()
 pnSetupPackaging()
-pnSetupUploadArchives()
-pnSetupDistApplication()
 pnSetupEclipse()
 
 dependencies {
-  compile ( 'org.glassfish.main.extras:glassfish-embedded-web:3.1.2' )
+  providedCompile ( 'org.glassfish.main.extras:glassfish-embedded-web:3.1.2' )
 }
