@@ -1,4 +1,4 @@
-apply from: '/home/thart/svn_depot/rambo/setup_closures.gradle'
+apply from: 'https://rambo.part.net/gradle/setup_closures.gradle'
 apply from: 'https://rambo.part.net/gradle/canonical_libs.gradle'
 
 apply plugin: 'war'
